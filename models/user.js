@@ -1,6 +1,11 @@
 const mongoose = require("mongoose");
 
 const restaurantSchema = new mongoose.Schema({
+  city: {
+    type: String,
+    required: true,
+    enum: ["Houston", "Dallas", "Austin", "San Antonio"],
+  },
   name: {
     type: String,
     required: true,
