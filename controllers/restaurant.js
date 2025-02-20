@@ -15,14 +15,23 @@ router.get("/", async (req, res) => {
   }
 });
 
-module.exports = router;
-
 // NEW ROUTE
-router.get('/new', async (req, res) => {
-  res.render('restaurants/new.ejs');
+router.get("/new", async (req, res) => {
+  res.render("restaurants/new.ejs");
 });
 
 // DELETE ROUTE
+router.delete("/:restaurantId", async (req, res) => {
+  try {
+    const currentUser = await User.findById(req.session.user._id);
+    currentUser.restaurants.id(req.params.restaurantId).deleteOne();
+    await currentUser.save();
+    res.redirect(`/users/${currentUser._id}/restaurants`);
+  } catch (error) {
+    console.log(error);
+    res.redirect("/");
+  }
+});
 
 // UPDATE ROUTE
 
@@ -42,3 +51,18 @@ router.post('/', async (req, res) => {
 // EDIT ROUTE
 
 // SHOW ROUTE
+router.get("/:restaurantId", async (req, res) => {
+  try {
+    const currentUser = await User.findById(req.session.user._id);
+    const restaurant = currentUser.restaurants.id(req.params.restaurantId);
+    res.render("restaurants/show.ejs", {
+      restaurant: restaurant,
+    });
+  } catch (error) {
+    console.log(error);
+    res.redirect("/");
+  }
+});
+                                   
+
+module.exports = router;

@@ -7,6 +7,17 @@
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1>List</h1>
+    <h1>Halal Spots</h1>
+    <ul>
+      <% restaurants.forEach(restaurant => { %>
+        <li>
+          <a href="/users/<%=user._id%>/restaurants/<%=restaurant._id%>">
+            <%= restaurant.name %>
+          </a>
+        </li>
+      <% }) %>
+    </ul>
+    <br>
     <a href="/users/<%=user._id%>/restaurants/new">Add a New Restaurant</a>
-    </body>
+  </body>
+</html>

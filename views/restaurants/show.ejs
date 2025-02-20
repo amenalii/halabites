@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= restaurant.name %></title>
+  </head>
+  <body>
+    <h1><%= restaurant.name %></h1>
+    <h2>Cuisine: <%= restaurant.cuisine %></h2>
+    <p><%= restaurant.address %></p>
+    <p><%= restaurant.phoneNumber %></p>
+    <p>
+      <a href="<%= restaurant.website %>" target="_blank"> Visit Website </a>
+    </p>
+    <br />
+    <form action="/users/<%=user._id%>/restaurants/<%=restaurant._id%>?_method=DELETE" method="POST">
+      <button type="submit">Delete</button>
+    </form>
+    <br />
+  </body>
+</html>
