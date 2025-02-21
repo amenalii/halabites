@@ -6,6 +6,7 @@
     <title><%= restaurant.name %></title>
   </head>
   <body>
+    <%- include('../partials/_navbar.ejs') %>
     <h1><%= restaurant.name %></h1>
     <h3>Cuisine: <%= restaurant.cuisine %></h3>
     <p><%= restaurant.address %></p>

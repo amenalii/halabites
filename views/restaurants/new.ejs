@@ -11,7 +11,8 @@
     <h2>Add a Halal Spot</h2>
     <form action="/users/<%=user._id%>/restaurants" method="POST">
       <label for="city">Main City</label>
-      <select id="city" name="city">
+      <select id="city" name="city" required>
+        <option disabled selected value> -- Select an Option -- </option>
         <option value="Houston">Houston</option>
         <option value="Dallas">Dallas</option>
         <option value="Austin">Austin</option>
@@ -40,6 +41,7 @@
       <br />
       <br />
       <button type="submit">Submit</button>
+      <button type="button" onclick="window.history.back()">Cancel</button>
     </form>
   </body>
 </html>
