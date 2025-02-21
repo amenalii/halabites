@@ -49,6 +49,18 @@ router.post('/', async (req, res) => {
 });
 
 // EDIT ROUTE
+router.get("/:restaurantId/edit", async (req, res) => {
+  try {
+    const currentUser = await User.findById(req.session.user._id);
+    const restaurant = currentUser.restaurants.id(req.params.restaurantId);
+    res.render("restaurants/edit.ejs", {
+      restaurant: restaurant,
+    });
+  } catch (error) {
+    console.log(error);
+    res.redirect("/");
+  }
+});
 
 // SHOW ROUTE
 router.get("/:restaurantId", async (req, res) => {
