@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+body {
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(121, 121, 121, 0.275);
+    height: 100vh;
+    width: 100vw;
+}
+
+.home-body {
+    background-image: url("https://images.template.net/111211/chalkboard-food-background-7es0k.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100vw;
+    color: rgba(255, 255, 255, 0.695);
+}
+
+.title {
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.695);
+    font-size: 200px;
+    margin: 10px;
+}
+
+.sub-title {
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.695);
+    font-size: 35px;
+    margin: 30px;
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.auth-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.signup, .signin {
+    text-decoration: none;
+    font-size: 30px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    font-weight: bold;
+}
+
+.signup:hover, .signin:hover {
+    background-color: rgba(255, 255, 255, 0);
+    color: azure;
+}
