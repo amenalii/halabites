@@ -3,10 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/restaurant-forms.css" />
     <title>Edit <%= restaurant.name %></title>
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
+    <div class="edit-container">
     <h1>Edit <%= restaurant.name %> </h1>
     <form action="/users/<%=user._id%>/restaurants/<%= restaurant._id %>?_method=PUT" method="POST">
       <label for="city">Main City:</label>
@@ -17,29 +19,27 @@
         <option value="San Antonio" <%= restaurant.city === "San Antonio" ? "selected" : "" %> > San Antonio </option>
       </select>
       <br />
-      <br />
       <label for="name">Name</label>
-      <input type="text" id="name" name="name" value="<%= restaurant.name %>"required />
-      <br />
+      <input type="text" id="name" name="name" value="<%= restaurant.name %>" required />
       <br />
       <label for="cuisine">Cuisine</label>
       <input type="text" id="cuisine" name="cuisine" value="<%= restaurant.cuisine %>" required />
       <br />
-      <br />
       <label for="address">Address</label>
-      <input type="text" id="address" name="address" value="<%= restaurant.address %>"required />
-      <br />
+      <input type="text" id="address" name="address" value="<%= restaurant.address %>" required />
       <br />
       <label for="phoneNumber">Phone Number</label>
       <input type="text" id="phoneNumber" name="phoneNumber" value="<%= restaurant.phoneNumber %>"/>
-      <br />
       <br />
       <label for="website">Website</label>
       <input type="text" id="website" name="website" value="<%= restaurant.website %>"/>
       <br />
       <br />
-      <button type="submit">Submit</button>
-      <button type="button" onclick="window.history.back()">Cancel</button>
+      <div class="button-container">
+        <button type="submit">Submit</button>
+        <button type="button" onclick="window.history.back()">Cancel</button>
+      </div>
     </form>
+    </div>
   </body>
 </html>

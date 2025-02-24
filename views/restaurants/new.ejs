@@ -3,45 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/restaurant-forms.css" />
     <title>Add a New Restaurant</title>
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1>Spice Up the List</h1>
-    <h2>Add a Halal Spot</h2>
-    <form action="/users/<%=user._id%>/restaurants" method="POST">
-      <label for="city">Main City</label>
-      <select id="city" name="city" required>
-        <option disabled selected value> -- Select an Option -- </option>
-        <option value="Houston">Houston</option>
-        <option value="Dallas">Dallas</option>
-        <option value="Austin">Austin</option>
-        <option value="San Antonio">San Antonio</option>
-      </select>
-      <br />
-      <br />
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" required />
-      <br />
-      <br />
-      <label for="cuisine">Cuisine</label>
-      <input type="text" id="cuisine" name="cuisine" required />
-      <br />
-      <br />
-      <label for="address">Address</label>
-      <input type="text" id="address" name="address" required />
-      <br />
-      <br />
-      <label for="phoneNumber">Phone Number</label>
-      <input type="text" id="phoneNumber" name="phoneNumber" />
-      <br />
-      <br />
-      <label for="website">Website</label>
-      <input type="text" id="website" name="website" />
-      <br />
-      <br />
-      <button type="submit">Submit</button>
-      <button type="button" onclick="window.history.back()">Cancel</button>
-    </form>
+    <div class="new-container">
+      <h1>Spice Up the List</h1>
+      <h2>Add a New Halal Spot</h2>
+      <form action="/users/<%=user._id%>/restaurants" method="POST">
+        <h3>Fill out the form below to add a new restaurant to the list!</h3>
+        <label for="city">Main City</label>
+        <select id="city" name="city" required>
+          <option disabled selected value> -- Select an Option -- </option>
+          <option value="Houston">Houston</option>
+          <option value="Dallas">Dallas</option>
+          <option value="Austin">Austin</option>
+          <option value="San Antonio">San Antonio</option>
+        </select>
+        <br />
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
+        <br />
+        <label for="cuisine">Cuisine</label>
+        <input type="text" id="cuisine" name="cuisine" required />
+        <br />
+        <label for="address">Address</label>
+        <input type="text" id="address" name="address" required />
+        <br />
+        <label for="phoneNumber">Phone Number</label>
+        <input type="text" id="phoneNumber" name="phoneNumber" />
+        <br />
+        <label for="website">Website</label>
+        <input type="text" id="website" name="website" />
+        <br />
+        <br />
+        <div class="button-container">
+        <button type="submit">Submit</button>
+        <button type="button" onclick="window.history.back()">Cancel</button>
+        </div>
+      </form>
+    </div>
   </body>
 </html>

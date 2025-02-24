@@ -4,32 +4,34 @@ body {
     font-family: 'Playfair Display', serif;
     display: flex;
     flex-direction: column;
-    background-color: rgba(121, 121, 121, 0.275);
+    background-color: rgba(252, 230, 130, 0.994);
     height: 100vh;
     width: 100vw;
 }
 
 .home-body {
-    background-image: url("https://images.template.net/111211/chalkboard-food-background-7es0k.jpg");
+    background-image: url("../images/cover.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;
     width: 100vw;
-    color: rgba(255, 255, 255, 0.695);
+    color: rgba(227, 0, 0, 0.818);
 }
 
 .title {
     font-weight: bold;
-    color: rgba(255, 255, 255, 0.695);
+    color: rgba(227, 0, 0, 0.818);
     font-size: 200px;
     margin: 10px;
+    text-align: center;
 }
 
 .sub-title {
     font-weight: bold;
-    color: rgba(255, 255, 255, 0.695);
+    color: rgba(227, 0, 0, 0.818);
     font-size: 35px;
     margin: 30px;
+    text-align: center;
 }
 
 .home-container {
@@ -38,7 +40,9 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    width: 100vw;
+    width: 50vw;
+    margin-left: auto;
+    text-align: center;
 }
 
 .auth-container {
@@ -47,21 +51,82 @@ body {
     align-items: center;
     justify-content: center;
     gap: 20px;
-
+    width: 100%;
+    margin-left: auto;
 }
 
-.signup, .signin {
+.signup,
+.signin {
     text-decoration: none;
     font-size: 30px;
     text-align: center;
     padding: 20px;
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.5);
-    color: black;
+    color: rgba(227, 0, 0, 0.818);
     font-weight: bold;
 }
 
-.signup:hover, .signin:hover {
+.signup:hover,
+.signin:hover {
     background-color: rgba(255, 255, 255, 0);
     color: azure;
+}
+
+.signin-container,
+.signup-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+h1 {
+    color: rgb(14, 175, 25);
+    font-weight: 800;
+    font-size: 2.5em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 40vw;
+    height: 50vh;
+    background-color: #c71d1d;
+    padding: 40px 50px 30px 50px;
+    border-radius: 30px;
+    color: #ffffff;
+}
+
+label {
+    font-size: 20px;
+    font-weight: 800;
+    text-align: left;
+}
+
+input {
+    border: 5px solid rgba(252, 230, 130, 0.994);
+    padding: 10px;
+    border-radius: 30px;
+    font-size: 20px;
+}
+
+button {
+    font-size: 22px;
+    font-weight: 800;
+    padding: 10px;
+    background-color: rgba(252, 230, 130, 0.994);
+    color: rgb(244, 5, 5);
+    border-radius: 30px;
+    border: none;
+    margin: 15px 0;
+}
+
+button:hover {
+    background-color: rgb(244, 5, 5);
+    color: rgba(252, 230, 130, 0.994);
 }

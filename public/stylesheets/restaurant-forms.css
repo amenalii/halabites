@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: rgba(161, 0, 0, 0.951);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+
+.new-container, .edit-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: bold;
+    color: rgba(252, 230, 130, 0.994);
+    margin: 1px;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: rgba(252, 230, 130, 0.994);
+    margin: 1px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 50%;
+    margin: 10px;
+    background-color: rgba(252, 230, 130, 0.994);
+    padding: 30px 40px 20px 40px;
+    border-radius: 30px;
+    color: rgba(204, 5, 5, 0.874);
+    font-weight: bold;
+}
+
+label {
+    font-size: 21px;
+    text-align: left;
+}
+
+input, select {
+    font-size: 20px;
+    padding: 1px;
+    border-radius: 5px;
+    border: 1px solid rgba(204, 5, 5, 0.874);
+}
+
+button {
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    width: 50%;
+    border: 1px solid rgba(204, 5, 5, 0.874);
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 25px;
+}
+
+button[type="submit"] {
+    background-color: rgba(204, 5, 5, 0.874);
+    color: rgba(252, 230, 130, 0.994);
+}
+
+button[type="submit"]:hover {
+    background-color: rgba(252, 230, 130, 0.994);
+    color: rgba(204, 5, 5, 0.874);
+}
+
+button[type="button"] {
+    background-color: rgb(173, 170, 170);
+    color: rgba(131, 5, 3, 0.994);
+}
+
+button[type="button"]:hover {
+    background-color: rgba(0, 0, 0, 0.994);
+    color: rgb(255, 255, 255);
+}
