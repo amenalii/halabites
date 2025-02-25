@@ -4,7 +4,7 @@ const restaurantSchema = new mongoose.Schema({
   city: {
     type: String,
     required: true,
-    enum: ["Houston", "Dallas", "Austin", "San Antonio"],
+    enum: ["Houston", "Dallas", "Austin", "San Antonio",],
   },
   name: {
     type: String,

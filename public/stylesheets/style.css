@@ -222,3 +222,7 @@ p {
     background-color: rgb(21, 151, 4);
     color: rgb(255, 255, 255);
 }
+
+img {
+    border-radius: 20px;
+}
