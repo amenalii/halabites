@@ -54,5 +54,7 @@ Several external resources were used to create this application. Below is a list
 ## Next Steps
 * Create a public page to allow everyone to see the restaurants that have been added. 
 * Add a search bar to find restaurants by name.
-* Implement filters and a favorite feature
+* Implement filters and a favorite feature.
 * Allow users to upload photos of restaurants and dishes. 
+* Add a notes section in the form so users can note dishes they liked or want to try.
+* Add a change password and forgot password feature. 
