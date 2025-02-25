@@ -3,27 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/show.css" />
     <title><%= restaurant.name %></title>
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1><%= restaurant.name %></h1>
-    <h3>Cuisine: <%= restaurant.cuisine %></h3>
-    <p><%= restaurant.address %></p>
-    <p><%= restaurant.phoneNumber %></p>
-    <% if (restaurant.website) { %>
-    <p>
-      <a href="<%= restaurant.website %>" target="_blank"> Visit Website </a>
-    </p>
-    <% } %>
-    <br />
-    <br />
-    <a href="/users/<%=user._id%>/restaurants/<%=restaurant._id%>/edit">Edit</a>
-    <br />
-    <br />
-    <form action="/users/<%=user._id%>/restaurants/<%=restaurant._id%>?_method=DELETE" method="POST">
-      <button type="submit">Delete</button>
-    </form>
-    <br />
+    <div class="main-container">
+      <div class="show-body">
+        <div class="restaurant-header">
+          <h1><%= restaurant.name %></h1>
+        </div>
+
+        <div class="restaurant-details">
+          <h3>Cuisine: <%= restaurant.cuisine %></h3>
+
+          <div class="restaurant-contact">
+            <p><strong>Address:</strong> <%= restaurant.address %></p>
+            <p><strong>Phone Number:</strong> <%= restaurant.phoneNumber %></p>
+          </div>
+        </div>
+        <div class="restaurant-website">
+          <% if (restaurant.website) { %>
+          <p>
+            <a href="<%= restaurant.website %>" target="_blank"
+              >Visit Website</a
+            >
+          </p>
+          <% } %>
+        </div>
+        <br />
+        <div class="actions-container">
+          <a href="/users/<%=user._id%>/restaurants/<%=restaurant._id%>/edit"
+            >Edit</a
+          >
+          <form
+            action="/users/<%=user._id%>/restaurants/<%=restaurant._id%>?_method=DELETE"
+            method="POST"
+          >
+            <button class="delete-button" type="submit">Delete</button>
+          </form>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
