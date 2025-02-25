@@ -31,7 +31,7 @@ Several Planning materials were created before the build of this app. Check them
 ### Deployment
 The application can be accessed by clicking on the link below to the deployed site. 
 
-[HalaBites - Live Site]()
+[HalaBites - Live Site](https://halabites-a2120cbffbed.herokuapp.com/)
 
 
 ## Attributions
