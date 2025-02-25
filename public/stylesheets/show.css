@@ -12,7 +12,7 @@ body {
     height: 100vh;
     width: 100vw;
     color: green;
-  }
+}
 
 .main-container {
     flex: 1;
@@ -44,14 +44,15 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 50px;
+    gap: 100px;
 }
 
-
+.restaurant-info,
 .restaurant-contact {
     display: flex;
     flex-direction: column;
 }
+
 
 .restaurant-website {
     font-size: 25px;

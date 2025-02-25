@@ -3,21 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>HalaBites</title>
   </head>
-  <body>
+  <body class="index-body">
     <%- include('../partials/_navbar.ejs') %>
-    <h1>Halal Spots</h1>
-    <ul>
-      <% restaurants.forEach(restaurant => { %>
-        <li>
-          <a href="/users/<%=user._id%>/restaurants/<%=restaurant._id%>">
-            <%= restaurant.name %>
-          </a>
-        </li>
+    <div class="index-header">
+      <h1>Halal Spots</h1>
+    </div>
+
+    <div class="new">
+      <a href="/users/<%=user._id%>/restaurants/new">Add a New Restaurant</a>
+    </div>
+
+    <div class="city-container">
+      <% const cities = ["Houston", "Dallas", "Austin", "San Antonio"]; %> 
+
+      <%cities.forEach(city => { %>
+      <div class="city-body">
+        <h2><%= city %></h2>
+
+        <% let restaurantsInCity = []; %> 
+        <% for (let i = 0; i <restaurants.length; i++) { %> 
+          <% if (restaurants[i].city === city) { %>
+            <% restaurantsInCity.push(restaurants[i]); %> 
+          <% } %> 
+        <% } %> 
+
+
+        <% if(restaurantsInCity.length > 0) { %>
+          <div class="restaurant-list">
+          <ul>
+            <% restaurantsInCity.forEach(restaurant => { %>
+              <li>
+                <a href="/users/<%=user._id%>/restaurants/<%=restaurant._id%>">
+                  <%= restaurant.name %>
+                </a>
+              </li>
+            <% }) %>
+          </ul>
+          </div>
+        <% } else { %>
+          <p>No spots discovered yet.</p>
+        <% } %>
+      </div>
       <% }) %>
-    </ul>
-    <br>
-    <a href="/users/<%=user._id%>/restaurants/new">Add a New Restaurant</a>
+    </div>
   </body>
 </html>

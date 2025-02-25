@@ -9,14 +9,16 @@ body {
     width: 100vw;
 }
 
-.new-container, .edit-container {
+.new-container,
+.edit-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
     width: 100vw;
-    text-align: center;;
+    text-align: center;
+    ;
 }
 
 h1 {
@@ -51,7 +53,8 @@ label {
     text-align: left;
 }
 
-input, select {
+input,
+select {
     font-size: 20px;
     padding: 1px;
     border-radius: 5px;
