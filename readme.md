@@ -33,28 +33,38 @@ The application can be accessed by clicking on the link below to the deployed si
 
 [HalaBites - Live Site](https://halabites-a2120cbffbed.herokuapp.com/)
 
+## Technologies Used
+* Node
+* Express
+* MongoDB
+* JavaScript
+* HTML
+* CSS
+* EJS
+* bcrypt
+* dotenv
+* Express-session
+* method-override
+* morgan
+* Google Fonts
+
+## Next Steps
+* Add Index Pages for Each City instead of having everything appear on a single screen. 
+* Create a public page to allow everyone to see the restaurants that have been added. 
+* Add a map feature and geolocation feature so users can see what is nearby. 
+* Add a search bar to find restaurants by name.
+* Implement filters and a favorite feature.
+* Allow users to upload photos of restaurants and dishes. 
+* Add a notes section in the form so users can note dishes they liked or want to try.
+* Add a change password and forgot password feature. 
 
 ## Attributions
 Several external resources were used to create this application. Below is a list of all the resources used.
 
 * Google - Research
 * Stack Overflow - Research & Debugging
-* General Assembly - Unit-2 Labs (Auth App, Cookbook Lab, SkyRockit Lab)
+* General Assembly - Unit-2 Labs (Auth App, Fruits Lab, Cookbook Lab, SkyRockit Lab)
 * [MDN Web Docs - Back History](https://developer.mozilla.org/en-US/docs/Web/API/History/back)
 * [MDN Web Docs - ForEach Looping](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
 * [EJS](https://ejs.co/)
-* [Youtube - ExpressJS Crash Course](https://www.youtube.com/watch?v=gnsO8-xJ8rs&ab_channel=TraversyMedia)
-
-## Technologies Used
-* Node
-* Express
-* MongoDB
-* Google Fonts
-
-## Next Steps
-* Create a public page to allow everyone to see the restaurants that have been added. 
-* Add a search bar to find restaurants by name.
-* Implement filters and a favorite feature.
-* Allow users to upload photos of restaurants and dishes. 
-* Add a notes section in the form so users can note dishes they liked or want to try.
-* Add a change password and forgot password feature. 
+* [Youtube - ExpressJS Crash Course](https://www.youtube.com/watch?v=gnsO8-xJ8rs&ab_channel=TraversyMedia) 
